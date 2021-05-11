@@ -1,23 +1,54 @@
 /* Add some css styles based on the tutorial at javascript.info: introduction to browser events
  https://javascript.info/introduction-browser-events */
 
-div.gallery {
-  margin: 5px;
-  border: 1px solid #ccc;
-  float: left;
-  width: 200px;
-}
-
-div.gallery:hover {
-  border: 1px solid #777;
-}
-
-div.gallery img {
-  width: 100%;
-  height: auto;
-}
-
-div.desc {
-  padding: 20px;
+ h1 {
   text-align: center;
+  font-family: "Arial";
+}
+
+html {
+  font-size: 36px;
+}
+
+.carousel {
+  width: 400px;
+  padding: 10px 40px;
+  background: rgb(216, 96, 16);
+}
+
+.carousel img {
+  width: 200px;
+  height: 200px;
+}
+
+body {
+  background-color: #0751f1;
+}
+
+
+.slider {
+  width: 150x;
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+
+
+.slider a {
+  height: 130px;
+  width: 3000px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  transition: margin-left 250ms;
+  font-size: 0;
+}
+
+.slider img {
+  display: inline-block;
 }
