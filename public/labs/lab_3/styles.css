@@ -1,54 +1,47 @@
 /* Add some css styles based on the tutorial at javascript.info: introduction to browser events
  https://javascript.info/introduction-browser-events */
-
- h1 {
-  text-align: center;
-  font-family: "Arial";
+ :root {
+	--column-size: min(100%, 500px);
+	--slider-size: min(100%, 300px);
 }
 
-html {
-  font-size: 36px;
+html, body {
+	background: rgb(88, 24, 238);
+	min-height: 200px;
 }
 
-.carousel {
-  width: 400px;
-  padding: 10px 40px;
-  background: rgb(216, 96, 16);
+h1, h2, footer {
+	margin-top: 25px;
+	text-align: center;
 }
 
-.carousel img {
-  width: 200px;
-  height: 200px;
+section {
+	margin: 0 auto;
+	min-height: 100px;
+	background: rgb(300, 150, 0);
 }
-
-body {
-  background-color: #0751f1;
-}
-
 
 .slider {
-  width: 150x;
+	display: flex;
+	overflow-x: scroll;
+	scroll-snap-type: x mandatory;
+	
+	width: var(--slider-size);
+	margin: 1em auto;
+	
+	border-radius: var(--slider-border-radius);
 }
 
-.prev {
-  left: 20px;
+.slidewrapper {
+	flex: 0 0 var(--slider-size);
+	width: var(--slider-size);
 }
 
-.next {
-  right: 20px;
-}
-
-
-.slider a {
-  height: 130px;
-  width: 3000px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  transition: margin-left 250ms;
-  font-size: 0;
-}
-
-.slider img {
-  display: inline-block;
+.slide {
+	background: cyan;
+	min-height: 200px;
+	aspect-ratio: 1.5;
+	
+	display: grid;
+	place-content: center;
 }

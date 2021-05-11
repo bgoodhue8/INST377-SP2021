@@ -1,8 +1,8 @@
 /* Put your javascript in here */
 let width = 50;
 let count = 3;
-let slider = carousel.querySelector('a');
-let item = carousel.querySelectorAll('img');
+let slider = carousel.querySelector('div');
+let slide = carousel.querySelectorAll('img');
 
 carousel.querySelector('.prev').onclick = function() {
     position += width * count;
@@ -12,6 +12,6 @@ carousel.querySelector('.prev').onclick = function() {
 
 carousel.querySelector('.next').onclick = function() {
     position -= width * count;
-    position = Math.max(position, -width * (item.length - count));
+    position = Math.max(position, -width * (slide.length - count));
     slider.style.marginLeft = position + 'px';
 };
